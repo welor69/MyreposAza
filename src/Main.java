@@ -3,26 +3,37 @@ import java.util.*;
 public class Main{
     public final static Scanner sc = new Scanner(System.in);
     public static void main(String[] args){
-        task1();
-        task2();
-        task3();
-        task4();
-        task5();
-        task6();
-        task7();
-        task8();
-        task9();
-        task10();
-        task11();
-        task12();
-        task13();
-        task14();
-        task15();
-        task16();
-        task17();
-        task18();
-        task19();
-        task20();
+//        task1();
+//        task2();
+//        task3();
+//        task4();
+//        task5();
+//        task6();
+//        task7();
+//        task8();
+//        task9();
+//        task10();
+//        task11();
+//        task12();
+//        task13();
+//        task14();
+//        task15();
+//        task16();
+//        task17();
+//        task18();
+//        task19();
+//        task20();
+//        task21();
+//        task22();
+//        task23();
+//        task24();
+//        task25();
+//        task26();
+//        task27();
+//        task28();
+//        task29();
+//        task30();
+
 
 
     }
@@ -217,6 +228,136 @@ public class Main{
         System.out.println(familyMembers);
 
 
+    }
+    //set,queue and stack
+    public static void task21(){
+        HashSet<Integer> numbers = new HashSet<>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(4);
+        numbers.add(5);
+
+        System.out.println(numbers);
+    }
+    public static void task22() {
+        HashSet<String> users = new HashSet<>();
+        users.add("admin");
+        users.add("aza");
+        users.add("eren");
+
+        System.out.println(isAllowed(users, "aza"));
+        System.out.println(isAllowed(users, "atai"));
+    }
+    static boolean isAllowed(HashSet<String> set, String name) {
+        return set.contains(name);
+    }
+    public static void task23(){
+        HashSet<Integer> set = new HashSet<>();
+        set.add(10);
+        set.add(20);
+        set.add(30);
+
+        System.out.println(set.size());
+
+        set.clear();
+
+        System.out.println(set.isEmpty());
+    }
+    public static void task24(){
+        HashSet<String> names = new HashSet<>();
+        names.add("Азамат");
+        names.add("Эрен");
+        names.add("Эльдар");
+        names.add("Абдулла");
+        names.add("Дауд");
+
+        boolean removed = names.remove("Дауд");
+
+        System.out.println("Удален: " + removed);
+        System.out.println(names);
+    }
+    public static void task25(){
+        HashSet<Integer> set1 = new HashSet<>();
+        set1.add(1);
+        set1.add(2);
+
+        HashSet<Integer> set2 = new HashSet<>();
+        set2.add(3);
+        set2.add(4);
+
+        set1.addAll(set2);
+
+        System.out.println(set1);
+    }
+    public static void task26(){
+        HashSet<Integer> A = new HashSet<>();
+        A.add(1);
+        A.add(2);
+        A.add(3);
+        A.add(4);
+
+        HashSet<Integer> B = new HashSet<>();
+        B.add(3);
+        B.add(4);
+        A.removeAll(B);
+        System.out.println(A);
+    }
+    public static void task27(){
+        HashSet<Integer> X = new HashSet<>();
+        X.add(1);
+        X.add(2);
+        X.add(3);
+
+        HashSet<Integer> Y = new HashSet<>();
+        Y.add(2);
+        Y.add(3);
+        Y.add(4);
+
+        X.retainAll(Y);
+
+        System.out.println(X);
+    }
+    public static void task28(){
+        HashSet<Integer> setA = new HashSet<>();
+        setA.add(1);
+        setA.add(2);
+        setA.add(3);
+
+        HashSet<Integer> setB = new HashSet<>();
+        setB.add(1);
+        setB.add(2);
+
+        if (setA.containsAll(setB)) {
+            System.out.println("setA contains all elements of setB");
+        } else {
+            System.out.println("setA does NOT contain all elements of setB");
+        }
+    }
+    public static void task29(){
+        String sentence = "java is easy and java is powerful";
+
+        String[] words = sentence.split(" ");
+
+        HashSet<String> uniqueWords = new HashSet<>();
+        for (String word : words) {
+            uniqueWords.add(word);
+        }
+
+        System.out.println(uniqueWords);
+    }
+    public static void task30(){
+        String[] words = {"Apple", "apple", "APPLE", "Banana"};
+
+        HashSet<String> set = new HashSet<>();
+
+        for (String word : words) {
+            set.add(word.toLowerCase());
+        }
+
+        System.out.println(set);
     }
 
 }
